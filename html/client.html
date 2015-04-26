@@ -28,24 +28,28 @@
 		<div class="div_add_cv">
 			<fieldset>
 				<legend>identit&eacute;</legend>
-				<input id="firstname" type="text" placeholder="nom">
-				<input id="lastname"  type="text" placeholder="prenom">
+				<input id="lastname"  type="text" placeholder="prenom"/>
+				<input id="firstname" type="text" placeholder="nom"/>
 			</fieldset>
 			<fieldset class="field_add_formation">
 				<legend> Formation </legend>
-				<input type="text" placeholder="titre"/> &nbsp;
-				<input type="text" placeholder="description" size="30"><br/>
+				<div class="form_field">
+					<input class="titre" type="text" placeholder="titre"/> &nbsp;
+					<input class="description" type="text" placeholder="description" size="30"/><br/>
+				</div>
 			</fieldset>
 			<button class="btn_add_formation">ajouter un champ</button>
 
 			<fieldset class="field_add_langue">
 				<legend> langues </legend>
+				<div class="field_langue">
 				<input type="text"/> &nbsp;
 				<select>
 					<option>1</option>
 					<option>2</option>
 					<option>3</option>
 				</select> <br/>
+				</div>
 			</fieldset>
 			<button class="btn_add_langue">ajouter un champ</button>
 
@@ -97,7 +101,7 @@
 		</div>
 </div>
 
-<script type="text/javascript" src="../js/client.js"> </script>
+<script type="text/javascript" src="../js/client.js?2="> </script>
 </body>
 
 </html>

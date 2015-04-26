@@ -42,15 +42,15 @@ $(document).ready(function() {
 					var txt = "<ol>";
 
 					for(var i = 0; i < resumes.length; i++) {
-						txt += "<li>";
-						txt += "ID : ";
-						txt += resumes[i].getElementsByTagName("id")[0].innerHTML + " ";
-						txt += resumes[i].getElementsByTagName("firstName")[0].innerHTML + " ";
-						txt += resumes[i].getElementsByTagName("lastName")[0].innerHTML + " ";
-						txt += "</li>";
+						txt = txt + "<li>";
+						txt = txt + "ID : ";
+						txt = txt + resumes[i].getElementsByTagName("id")[0].innerHTML + " ";
+						txt = txt + resumes[i].getElementsByTagName("firstName")[0].innerHTML + " ";
+						txt = txt + resumes[i].getElementsByTagName("lastName")[0].innerHTML + " ";
+						txt = txt + "</li>";
 					}
 
-					txt += "</ol>";
+					txt = txt + "</ol>";
 
 					$(".div_one_cv").slideUp();
 					$(".div_add_cv").slideUp();
@@ -72,10 +72,40 @@ $(document).ready(function() {
 		var firstName = $("#firstname").val();
 		var  lastName = $("#lastname").val();
 
-		txt += "<firstName>" + firstName + "</firstName>";
-		txt += "<id>0</id>"; 
-		txt += "<lastName>"+ lastName +"</lastName>"
-		txt += "</resume>";
+		txt = txt + "<firstName>";
+		txt = txt + firstName
+		txt = txt + "</firstName>";
+
+		var formations = document.getElementsByClassName("form_field");
+
+
+		for(var i = 0; i < formations.length; i++) {
+			txt = txt + "<formations>";
+			txt = txt + "<description>";
+			txt = txt +  formations[i].getElementsByTagName("input")[1].value;
+			txt = txt + "</description>";
+			txt = txt + "<titre>";
+			txt = txt + formations[i].getElementsByTagName("input")[0].value;
+			txt = txt + "</titre>";
+			txt = txt + "</formations>";
+		}
+
+		var langues  = document.getElementsByClassName("field_langue");
+
+		for(var i = 0; i < langues.length; i++) {
+			txt = txt + "<langues>";
+			txt = txt + "<name>";
+			txt = txt +  langues[i].getElementsByTagName("input")[0].value;
+			txt = txt + "</name>";
+			txt = txt + "<niveau>";
+			txt = txt + langues[i].getElementsByTagName("select")[0].value;
+			txt = txt + "</niveau>";
+			txt = txt + "</langues>";
+		}
+
+		txt = txt + "<id>0</id>"; 
+		txt = txt + "<lastName>"+ lastName +"</lastName>"
+		txt = txt + "</resume>";
 
 		return txt;		
 	}
@@ -84,6 +114,8 @@ $(document).ready(function() {
 		var xhr = getXMLHttpRequest();
 		
 		var txt = my_requeteBody();
+
+		alert(txt);
 
 		xhr.onreadystatechange = function() {
 			if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
@@ -128,7 +160,9 @@ $(document).ready(function() {
 
 		var txt = $(".field_add_formation").html();
 
+		txt = txt + "<div class=\"form_field\">";
 		txt = txt + "<input type=\"text\" placeholder=\"re\"/> &nbsp <input type=\"text\" size=\"30\" placeholder=\"description\" /> <br/>";
+		txt = txt + "</div>"
 
 		$(".field_add_formation").html(txt);
 	});
@@ -137,12 +171,15 @@ $(document).ready(function() {
 
 		var txt = $(".field_add_langue").html();
 
+		txt = txt + "<div class=\"field_langue\">"
 		txt = txt + "<input type=\"text\"/> &nbsp <select><option>1</option><option>2</option><option>3</option></select><br/>";
+		txt = txt + "</div>";
 
 		$(".field_add_langue").html(txt);
 	});
 
 	
+	/*
 	$(".button_r").click(function(){
 		var xhr = getXMLHttpRequest();
 		
@@ -154,5 +191,5 @@ $(document).ready(function() {
 		
 		xhr.open("GET", "http://localhost:8080/1-1.0-SNAPSHOT/rest/resume/", true);
 		xhr.send(null);
-	});
+	}); */
 });
