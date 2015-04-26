@@ -17,39 +17,43 @@
 			<button class="btn_one_cv"> Voir CV</button>
 			<input type="number" size="2">
 		</div>
-		<div class="message de retoure">
+		<div class="message_failure">
 			MESSAGE!!!
 		</div>
-		<div class="liste_cv">
-			
+
+		<div class="message_success">
+			MESSAGE!!!
 		</div>
+
 		<div class="div_add_cv">
 			<fieldset>
 				<legend>identit&eacute;</legend>
 				<input id="firstname" type="text" placeholder="nom">
-				<input id="lastname" type="text" placeholder="prenom">
+				<input id="lastname"  type="text" placeholder="prenom">
 			</fieldset>
-			<fieldset>
+			<fieldset class="field_add_formation">
 				<legend> Formation </legend>
-				<input type="text" placeholder="titre"/><br/>
-				<textarea placeholder="description"></textarea>
-				<br/>
-				<button class="add_formation">ajouter un champ</button>
+				<input type="text" placeholder="titre"/> &nbsp;
+				<input type="text" placeholder="description" size="30"><br/>
 			</fieldset>
-			<fieldset>
+			<button class="btn_add_formation">ajouter un champ</button>
+
+			<fieldset class="field_add_langue">
 				<legend> langues </legend>
-				<input type="text"/>
+				<input type="text"/> &nbsp;
 				<select>
 					<option>1</option>
 					<option>2</option>
 					<option>3</option>
 				</select> <br/>
-				<button>ajouter un champ</button>
 			</fieldset>
+			<button class="btn_add_langue">ajouter un champ</button>
 
 			<fieldset>
 				<legend> section 1</legend>
 			</fieldset>
+			<button class="validate">valider</button>
+
 		</div>
 		<div class="div_one_cv">
 			<div class="nomp_prenom">Nom prenom id</div>
