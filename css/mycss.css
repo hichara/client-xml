@@ -2,15 +2,36 @@
 
 
 body{
-
+	background-color: #4576A5;
+	padding-left: 15%;
+	padding-right: 30%;
 }
 
 
 
 .section_of_cv {
-	display: block;
+	display: 
 }
 
+
 fieldset{
-	margin: 5px;
+
 }
+
+button{
+	color: #4576A5;
+	width: 200px;
+	border-radius: 5px;
+}
+
+ol{
+	text-align: center;	
+}
+
+li{
+	height: 30px;
+	padding: 30px;
+	font-size: 160%;
+	border-radius: 10px;
+}
+

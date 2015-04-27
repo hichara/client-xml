@@ -5,27 +5,26 @@
 <title>Title of the document</title>
 </head>
  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
- <link rel="stylesheet" type="text/css" href="../css/mycss.css">
+ <link rel="stylesheet" type="text/css" href="../css/mycss.css?2=">
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <body>
+
 
 <div class="body">
 		<div class="box_header">
 			<button class="btn_all_cv"> Lister tout les Cv</button>
 			<button class="btn_add_cv"> Ajouter CV </button>
 			<button class="btn_one_cv"> Voir CV</button>
-			<input type="number" size="2">
-		</div>
-		<div class="message_failure">
-			MESSAGE!!!
-		</div>
-
-		<div class="message_success">
-			MESSAGE!!!
+			<input id="numCV" type="number" size="2">
 		</div>
 
 		<div class="div_add_cv">
+			<div>
+				<button class="btn_add_langue">+ langue</button>
+				<button class="btn_add_formation">+ formation</button>
+				<button class="validate">valider</button>			
+			</div>
 			<fieldset>
 				<legend>identit&eacute;</legend>
 				<input id="lastname"  type="text" placeholder="prenom"/>
@@ -35,69 +34,32 @@
 				<legend> Formation </legend>
 				<div class="form_field">
 					<input class="titre" type="text" placeholder="titre"/> &nbsp;
-					<input class="description" type="text" placeholder="description" size="30"/><br/>
+					<input class="description" type="text" placeholder="description" size="50"/><br/>
 				</div>
 			</fieldset>
-			<button class="btn_add_formation">ajouter un champ</button>
-
+	
 			<fieldset class="field_add_langue">
 				<legend> langues </legend>
 				<div class="field_langue">
-				<input type="text"/> &nbsp;
+				<input type="text"/> &nbsp; niveau
 				<select>
 					<option>1</option>
 					<option>2</option>
 					<option>3</option>
-				</select> <br/>
+				</select>
 				</div>
 			</fieldset>
-			<button class="btn_add_langue">ajouter un champ</button>
-
-			<fieldset>
-				<legend> section 1</legend>
-			</fieldset>
-			<button class="validate">valider</button>
-
+			</div>
 		</div>
+
 		<div class="div_one_cv">
-			<div class="nomp_prenom">Nom prenom id</div>
+			<div class="nom_prenom"></div>
 			<div class="display_formation">
-				<h3>Formation</h3>
-				<table>
-					 <tr>
-						<th class="formation_title">cdcd</th>
-						<td class="formation_description">cdcd</td>
-					</tr>
-					 <tr>
-						<th class="formation_title">cdcd</th>
-						<td class="formation_description">cdcd</td>
-					</tr>
-					 <tr>
-						<th class="formation_title">cdcd</th>
-						<td class="formation_description">cdcd</td>
-					</tr>
-					 <tr>
-						<th class="formation_title">cdcd</th>
-						<td class="formation_description">cdcd</td>
-					</tr>
-				</table>
 			</div>
 			<div class="display_langues">
-				<h3>Langues :</h3>
-				<ol>
-					<li> <span>langues</span> : <span>niveau</span>  </li> 
-					<li> <span>langues</span> : <span>niveau</span>  </li> 
-					<li> <span>langues</span> : <span>niveau</span>  </li> 
-					<li> <span>langues</span> : <span>niveau</span>  </li> 
-				</ol>
 			</div>
 		</div>
 		<div class="div_all_cv">
-			<ol>
-				<li>xsx 515cd 51c1</li>
-				<li>xsx 515cd 51c1</li>
-				<li>xsx 515cd 51c1</li>
-			</ol>
 		</div>
 </div>
 
