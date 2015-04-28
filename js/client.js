@@ -8,6 +8,8 @@ $(document).ready(function() {
     	}});
 	}); */
 
+	var myaddr_Tomcat = "http://localhost:8080/1-1.0-SNAPSHOT/rest/resume/";
+
 	function getXMLHttpRequest() {
 		var xhr = null;
 		
@@ -59,7 +61,7 @@ $(document).ready(function() {
 			}
 		};
 		
-		xhr.open("GET", "http://localhost:8080/1-1.0-SNAPSHOT/rest/resume/", true);
+		xhr.open("GET", myaddr_Tomcat, true);
 		xhr.send(null);		
 	}
 
@@ -119,7 +121,7 @@ $(document).ready(function() {
 			}
 		};
 		
-		xhr.open("GET", "http://localhost:8080/1-1.0-SNAPSHOT/rest/resume/" + id_c, true);
+		xhr.open("GET", myaddr_Tomcat + id_c, true);
 		xhr.send(null);				
 	}
 
@@ -185,7 +187,7 @@ $(document).ready(function() {
 			}
 		};
 		
-		xhr.open("POST", "http://localhost:8080/1-1.0-SNAPSHOT/rest/resume/", true);
+		xhr.open("POST", myaddr_Tomcat, true);
 		xhr.setRequestHeader("Content-Type", "application/xml");
 		xhr.send(txt);
 	});
